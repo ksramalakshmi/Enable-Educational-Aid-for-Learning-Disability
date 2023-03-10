@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def generate_response(prompt):
     completions = openai.Completion.create (
@@ -18,7 +18,8 @@ def generate_response(prompt):
 
 def summarise():
 
-    st.title("Enable Summarizer")
+    st.title("Understand easily with me!")
+    st.subheader("Summarise your lesson in a few sentences!")
 
     prompt = st.text_area("Enter your message:", key='prompt')
     if st.button("Submit", key='submit'):
