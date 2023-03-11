@@ -1,9 +1,5 @@
 import pyttsx3
-import time
-import openai
 import streamlit as st
-
-openai.api_key = "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"
 
 def read_aloud():
     st.title("Read Aloud With Me!")
@@ -21,7 +17,7 @@ def read_aloud():
 
         report = []
         res_box = st.empty()
-        passage = """It's a lovely day. Please get up And come and play. The birds are singing in the trees, Arid you can hear the buzzing bees. Wash and dress And come on oil -Everyone is up and about. The cow, the horses, the ducks And the sheep, The tiniest chicken."""
+        passage = """Wake up! It's a lovely day. Please get up And come and play. The birds are singing in the trees, Arid you can hear the buzzing bees. Wash and dress And come on oil -Everyone is up and about. The cow, the horses, the ducks And the sheep, The tiniest chicken."""
         passage = passage.split()
         for resp in passage:
             report.append(resp)

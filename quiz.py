@@ -1,19 +1,10 @@
-#import openai
 import streamlit as st
-
-#openai.api_key = "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"
-
-# This function uses the OpenAI Completion API to generate a 
-# response based on the given prompt. The temperature parameter controls 
-# the randomness of the generated response. A higher temperature will result 
-# in more random responses, 
-# while a lower temperature will result in more predictable responses.
 
 def quiz():
     q1, q2, q3, q4 = "","","",""
     st.title("Enable Qui-zy")
     score = 0
-    #prompt = st.text_area("Enter your message:", key='prompt')
+    
     st.write("1. What is the purpose of the poem 'Wake up! Wake up!'?")
     q1 = st.radio('Select answer for Question 1: ', ('To encourage people to stay in bed all day', 
                                                     'To remind people to listen to the birds and bees', 

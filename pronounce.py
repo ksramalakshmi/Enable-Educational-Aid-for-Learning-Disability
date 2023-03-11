@@ -4,8 +4,9 @@ import record
 
 def pronounce():
     recognizer = speech_recognition.Recognizer()
-    st.title("Speech Recognition")
+    st.title("Check your pronounciation!")
 
+    st.subheader("Speak the word and compare it with the prompt")
     prompt = "Beautiful"
     st.write("Prompt : ", prompt)
     st.write("Press the button to start recording")

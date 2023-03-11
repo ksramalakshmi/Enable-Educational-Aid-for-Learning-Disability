@@ -1,3 +1,9 @@
 streamlit
 openai
 pyttsx3
+streamlit-chat
+glob
+sounddevice
+scipy
+speech-recognition
+Pillow
