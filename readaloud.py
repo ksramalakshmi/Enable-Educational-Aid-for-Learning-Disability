@@ -11,7 +11,7 @@ def read_aloud():
     if st.button("Read Aloud", key='submit'):
         engine = pyttsx3.init()
         rate = engine.getProperty('rate')
-        engine.setProperty('rate', rate-50)
+        engine.setProperty('rate', rate+50)
 
         voices = engine.getProperty('voices')
         engine.setProperty('voice', voices[1].id)
@@ -21,17 +21,14 @@ def read_aloud():
 
         report = []
         res_box = st.empty()
-        for resp in openai.Completion.create(model='text-davinci-003',
-                                            prompt="Please give me a sample paragraph to read aloud by a child",
-                                            max_tokens=120, 
-                                            temperature = 0.5,
-                                            stream = True):
-            
-            report.append(resp.choices[0].text)
-            result1 = "".join(report[:-1]).strip()
+        passage = """It's a lovely day. Please get up And come and play. The birds are singing in the trees, Arid you can hear the buzzing bees. Wash and dress And come on oil -Everyone is up and about. The cow, the horses, the ducks And the sheep, The tiniest chicken."""
+        passage = passage.split()
+        for resp in passage:
+            report.append(resp)
+            result1 = " ".join(report[:-1]).strip()
             result2 = report[-1]
-            result1 = result1.replace("\n", "")
+            result1 = result1.replace("\n", " ")
             res_box.markdown(f'*{result1}* **:red[{result2}]**')
-            engine.say(resp.choices[0].text)
+            engine.say(resp)
             engine.runAndWait()
             
