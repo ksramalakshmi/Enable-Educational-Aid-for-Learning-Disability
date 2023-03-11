@@ -2,8 +2,9 @@ streamlit
 openai
 pyttsx3
 streamlit-chat
-glob
+streamlit-drawable-canvas
+glob2
 sounddevice
 scipy
-speech-recognition
+SpeechRecognition
 Pillow
