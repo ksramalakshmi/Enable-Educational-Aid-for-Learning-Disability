@@ -18,7 +18,7 @@ def pronounce():
             record.record()
             break
 
-    with speech_recognition.AudioFile("sample.wav") as source:
+    with speech_recognition.AudioFile("output.wav") as source:
         audio = recognizer.record(source)
         try:
             s = recognizer.recognize_google(audio)
