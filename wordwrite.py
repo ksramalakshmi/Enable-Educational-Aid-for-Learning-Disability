@@ -14,7 +14,7 @@ def writeocr():
 
     # lis = ['GOOD', "DAD", "MOM", "BAD"]
     # prompt = random.choice(lis)
-    prompt = "GOOD"
+    prompt = "BIRDS"
     st.markdown(f'*{prompt}*')
 
     stroke_width = 15 #st.sidebar.slider("Stroke width: ", 1, 25, 3)
@@ -42,8 +42,8 @@ def writeocr():
     if(st.button("Submit", key='submit')):
         image = canvas_result.image_data
         result = identify(image)
-        st.write(result)
-        if(result == prompt):
+        st.write(result.upper())
+        if(result.lower() == prompt.lower()):
             response = "CORRECT"
             st.success(response)
         else:

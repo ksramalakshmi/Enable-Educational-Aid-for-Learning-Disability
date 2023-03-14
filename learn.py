@@ -31,7 +31,7 @@ def learn_page():
 
         const headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer OPEN API KEY"
         };
 
         fetch(endpoint, {
